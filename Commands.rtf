@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgray\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1. dotnet \'97info \
+2. dotnet new list \
+3. dotnet new sln\
+4. dotnet new webapi -o src/AuctionService -controllers (this extra -controller for 8.0)\
+5. 
+\f1\fs22 \cf2 \CocoaLigature0 dotnet sln add src/AuctionService (to add project into the solution)\
+\
+\
+\
+6. dotnet tool list -g\
+7. dotnet ef migrations add "InitialCreate" -o Data/Migrations \
+\
+8. docker compose up -d\
+9. dotnet ef database update \
+\
+10. dotnet ef database drop\
+\
+\
+11. dotnet new gitignore}
