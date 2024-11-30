@@ -5,22 +5,34 @@
 \paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
 \pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
 
-\f0\fs24 \cf0 1. dotnet \'97info \
+\f0\fs24 \cf0 // Auction Service\
+\
+1. dotnet \'97info \
 2. dotnet new list \
 3. dotnet new sln\
 4. dotnet new webapi -o src/AuctionService -controllers (this extra -controller for 8.0)\
 5. 
 \f1\fs22 \cf2 \CocoaLigature0 dotnet sln add src/AuctionService (to add project into the solution)\
-\
-\
-\
 6. dotnet tool list -g\
 7. dotnet ef migrations add "InitialCreate" -o Data/Migrations \
-\
 8. docker compose up -d\
 9. dotnet ef database update \
-\
 10. dotnet ef database drop\
+11. dotnet new gitignore\
 \
 \
-11. dotnet new gitignore}
+// Search Service \
+\
+1. 
+\f0\fs24 \cf0 \CocoaLigature1 dotnet new webapi -o src/SearchService -controllers (this extra -controller for 8.0)\
+2.  
+\f1\fs22 \cf2 \CocoaLigature0 dotnet sln add src/SearchService (to add project into the solution)\
+3. docker compose up -d\
+\
+\
+/// if want to remove database (mongodb, postgres etc)\
+1. docker volume ls\
+2. docker volume rm carsties_mongodata\
+3. docker compose up -d\
+ \
+4. docker compose down}
